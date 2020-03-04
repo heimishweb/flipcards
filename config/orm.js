@@ -41,6 +41,36 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
+  selectNext: function(table, vals, cb) {
+  
+    var queryString = "SELECT * FROM " + table + " WHERE ";
+    queryString += vals;
+    queryString += " ; ";
+
+    console.log("querString: ", queryString);
+
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
+  selectOne: function(table, vals, cb) {
+  
+    var queryString = "SELECT * FROM " + table + " WHERE ";
+    queryString += vals;
+    queryString += " ; ";
+
+    console.log("querString: ", queryString);
+
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },  
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
@@ -49,7 +79,7 @@ var orm = {
       }
       cb(result);
     });
-  },
+  },                  
   insertOne: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 

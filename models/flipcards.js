@@ -2,10 +2,20 @@
 var orm = require("../config/orm.js");
 
 var flipcard = {
+  selectNext: function(vals, cb) {
+    orm.selectNext("flipcard", vals, function(res) {
+      cb(res);
+    });  
+  },
+  selectOne: function(vals, cb) {
+    orm.selectOne("flipcard", vals, function(res) {
+      cb(res);
+    });  
+  },
   selectAll: function(cb) {
     orm.selectAll("flipcard", function(res) {
       cb(res);
-    });
+    });  
   },
   // The variables cols and vals are arrays.
   insertOne: function(cols, vals, cb) {

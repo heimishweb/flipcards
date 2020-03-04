@@ -1,18 +1,47 @@
 
  <h1>Flip Cards</h1>
-        <!--<h3>Hover over the image below:</h3>-->
+ <!--<h3>Hover over the image below:</h3>-->
         
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              
-         <img src="/assets/img/cardFlip.png";alt="Avatar" style="width:600px;height:400px;">-->
-            </div>
-            <div class="flip-card-back">  
-                <!--<div style="background-image: url('cardFlipReverse.png');">-->
-                <img src="/assets/img/cardfliprevetse.png";alt="" style="width:600px;height:400px;">
-             
-            </div>
-          </div>
-        </div>
         
+{{#each flipcards}}
+<div id="rw{{@index}}" class="hideit">
+
+<div class="bg">  
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front" style="background-image: url('/assets/img/cardFlipTexture.png');" id='over'>
+        <h1>{{question}}</h1>
+        {{!-- <h1>Front</h1> --}}
+      </div>
+
+       <div class="flip-card-back" style="background-image: url('/assets/img/cardFlipTexture.png');">
+    
+        <h1>{{answer}}</h1>
+         {{!-- <h1>Back</h1> --}}
+      </div>
+
+    </div>
+   </div>
+</div>
+  
+
+
+  <div style=" text-align:center; margin-top:25px">     
+  <button class="show-next" data-id="{{@index}}" id="{{@index}}">NEXT</button></li>      
+  </div>
+
+
+
+</div>  
+
+
+</div>
+{{/each}}
+
+
+<script>
+$(document).ready(function () {
+  $("#rw0").show();
+});
+ </script>       
