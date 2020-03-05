@@ -18,7 +18,7 @@ var flipcard = require("../models/flipcards.js");
 // });
 
 
-
+// Route to get to start page 
 router.get("/", function(req, res) {
 
    var cat = "javascript";
@@ -26,46 +26,109 @@ router.get("/", function(req, res) {
 
   console.log("conditionI: ",condition);
  
-   flipcard.selectOne(
-     
+   flipcard.selectOne(  
     condition,
     function(data) {  
     var hbsObject = {
       flipcards: data,
     }
-
     console.log("results: ",hbsObject);
-    res.render("index", hbsObject);
+    res.render("starterPage", hbsObject);
   });
 
 });
 
+// route to get to javascript questions
+router.get("/javascript", function(req, res) {
+  var cat = "javascript";
+ var condition = " category = '" + cat + "'" ;
+ console.log("conditionI: ",condition);
+  flipcard.selectOne(
+   condition,
+   function(data) {  
+   var hbsObject = {
+     flipcards: data,
+   }
+   console.log("results: ",hbsObject);
+   res.render("index", hbsObject);
+ });
+});
 
-router.get("/api/flipcards/:id", function(req, res) {
+// Route to get to html questions
+router.get("/hypertext", function(req, res) {
+  var cat = "html";
+ var condition = " category = '" + cat + "'" ;
+ console.log("conditionI: ",condition);
+  flipcard.selectOne(
+   condition,
+   function(data) {  
+   var hbsObject = {
+     flipcards: data,
+   }
+   console.log("results: ",hbsObject);
+   res.render("index", hbsObject);
+ });
+});
 
-  var condition = " id = " + req.params.id;
+// Route to get to css questions
+router.get("/css", function(req, res) {
+  var cat = "css";
+ var condition = " category = '" + cat + "'" ;
+ console.log("conditionI: ",condition);
+  flipcard.selectOne(
+   condition,
+   function(data) {  
+   var hbsObject = {
+     flipcards: data,
+   }
+   console.log("results: ",hbsObject);
+   res.render("index", hbsObject);
+ });
+});
 
-  // var start = 1;  
-  // if (req.params.id === "" ) { var condition = " id = " + req.params.id; }
-  // else                       { var condition = " id = " + start ; }
+// Route to get to mysql questions
+router.get("/mysql", function(req, res) {
+  var cat = "sql";
+ var condition = " category = '" + cat + "'" ;
+ console.log("conditionI: ",condition);
+  flipcard.selectOne(
+   condition,
+   function(data) {  
+   var hbsObject = {
+     flipcards: data,
+   }
+   console.log("results: ",hbsObject);
+   res.render("index", hbsObject);
+ });
+});
 
-  console.log("next condition: ",condition);
+
+
+// router.get("/api/flipcards/:id", function(req, res) {
+
+//   var condition = " id = " + req.params.id;
+
+//   // var start = 1;  
+//   // if (req.params.id === "" ) { var condition = " id = " + req.params.id; }
+//   // else                       { var condition = " id = " + start ; }
+
+//   console.log("next condition: ",condition);
  
-   flipcard.selectNext(
-    condition,
-    function(data) {  
-    var hbsObject = {
-      flipcards: data,
-    }
+//    flipcard.selectNext(
+//     condition,
+//     function(data) {  
+//     var hbsObject = {
+//       flipcards: data,
+//     }
 
-    console.log("Next results: ",hbsObject);
-    res.json({ id: res.id, 
-              question: res.question,
-              answer: res.answer
-    });
-  });
+//     console.log("Next results: ",hbsObject);
+//     res.json({ id: res.id, 
+//               question: res.question,
+//               answer: res.answer
+//     });
+//   });
 
-});
+
 
 
 
