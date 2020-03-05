@@ -195,7 +195,8 @@ button {
   transform: translate(-50%, -50%) !important;
 }
 
-
-
-
-
+#starterPage{
+  position: fixed;
+  margin-top: 15px;
+  margin-left: 25px;
+}
