@@ -23,9 +23,13 @@ $(function() {
 
 
   $(".show-again").on("click", function(event) {
-    location.reload();  
-    
+    location.reload();   
   });
+
+  $(".show-new").on("click", function(event) {
+    location.href="/"
+  });
+
 
 
  
