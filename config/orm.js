@@ -62,7 +62,7 @@ var orm = {
     queryString += vals;
     queryString += " ; ";
 
-    console.log("querString: ", queryString);
+    // console.log("querString: ", queryString);
 
     connection.query(queryString, function(err, result) {
       if (err) {

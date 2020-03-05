@@ -19,12 +19,13 @@ var flipcard = require("../models/flipcards.js");
 
 
 // Route to get to start page 
+=======
 router.get("/", function(req, res) {
 
    var cat = "javascript";
   var condition = " category = '" + cat + "'" ;
 
-  console.log("conditionI: ",condition);
+  // console.log("conditionI: ",condition);
  
    flipcard.selectOne(  
     condition,
@@ -32,8 +33,14 @@ router.get("/", function(req, res) {
     var hbsObject = {
       flipcards: data,
     }
+
     console.log("results: ",hbsObject);
     res.render("starterPage", hbsObject);
+=======
+
+    // console.log("results: ",hbsObject);
+    res.render("index", hbsObject);
+
   });
 
 });
