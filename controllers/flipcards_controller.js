@@ -7,24 +7,12 @@ var flipcard = require("../models/flipcards.js");
 
 // Create all our routes and set up logic within those routes where required.
 
-// router.get("/", function(req, res) {
-//   flipcard.selectAll(function(data) {
-//     var hbsObject = {
-//       flipcards: data
-//     };
-//     console.log(hbsObject);
-//     res.render("index", hbsObject);
-//   });
-// });
-
-
-
 router.get("/", function(req, res) {
 
    var cat = "javascript";
   var condition = " category = '" + cat + "'" ;
 
-  console.log("conditionI: ",condition);
+  // console.log("conditionI: ",condition);
  
    flipcard.selectOne(
      
@@ -34,7 +22,7 @@ router.get("/", function(req, res) {
       flipcards: data,
     }
 
-    console.log("results: ",hbsObject);
+    // console.log("results: ",hbsObject);
     res.render("index", hbsObject);
   });
 
