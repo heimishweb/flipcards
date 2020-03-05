@@ -33,5 +33,3 @@ var flipcard = {
 // Export the database functions for the controller (flipcards_controller.js).
 module.exports = flipcard;
 
-
-
