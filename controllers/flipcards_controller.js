@@ -93,7 +93,10 @@ router.post("/api/flipcards", function(req, res) {
   });
 });
 
-
+// Route to get to Home Page
+router.get("/starterPage", function(req, res) {
+  res.render("starterPage");
+});
 
 // Export routes for server.js to use.
 module.exports = router;
