@@ -1,7 +1,7 @@
 -- HTML
 INSERT INTO flipcard (category, question, answer) VALUES ('html','Where does the link for CSS file go in the html?','Within head tags.');
 INSERT INTO flipcard (category, question, answer) VALUES ('html','What does CDN stand for?','Content delivery network');
-INSERT INTO flipcard (category, question, answer) VALUES ('html','What is the difference between HTML elements and tags?','');
+INSERT INTO flipcard (category, question, answer) VALUES ('html','What is the difference between HTML elements and tags?','An HTML tag is an indication to a web browser of how a web page should displayed, but an HTML element is an individual component of HTML. HTML elements are created using HTML tags.');
 INSERT INTO flipcard (category, question, answer) VALUES ('html','Name at least 3 HTML layout elements.','header, nav, section, article, aside and footer');
 INSERT INTO flipcard (category, question, answer) VALUES ('html','What are the list types available in HTML?','Ordered list, Unordered list, Definition list, Menu list, Directory list');
 INSERT INTO flipcard (category, question, answer) VALUES ('html','What are the storage types of HTML5','Session Storage and Local Storage');

@@ -1,5 +1,3 @@
-
-
 body, html {
   height: 100%;
   margin: 0;
@@ -13,7 +11,6 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
  
 .flip-card  {
   margin: 5% auto 0 auto;
@@ -35,13 +32,9 @@ body, html {
 
 .flip-card:hover .flip-card-inner {
   /* transform: rotateY(180deg); */
-
-  
     -ms-transform: rotateY(-180deg); /* IE 9 */
     -webkit-transform: rotateY(-180deg); /* Safari Chrome */
     transform: rotateY(-180deg);
-
- 
 }
 
 .flip-card-front, .flip-card-back {
@@ -49,8 +42,7 @@ body, html {
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
-  backface-visibility:visible;
-  
+  backface-visibility:visible; 
 }
 
 .flip-card-front {
@@ -59,12 +51,10 @@ body, html {
 }
 
 .flip-card-back {
- 
   position: absolute;
   color:black;
   font-weight: bold;
-  transform: rotateY(180deg);
-  
+  transform: rotateY(180deg); 
 }
 
 .flip-box {
@@ -107,8 +97,6 @@ body, html {
   transform: rotateX(180deg);
 }
 
-
-
 h1 {
     text-align: center;
     color: rgb(93, 41, 50);
@@ -118,18 +106,11 @@ img {
   display: block;
   margin-top: 50px;
   margin-left: auto;
-  margin-right: auto;
-  
+  margin-right: auto; 
 }
-
-
-
-
-
 
 button {
   background-color: brown;
-
   border-radius: 5px;
   border: lightgray solid 1px;
   color: white;
@@ -140,11 +121,8 @@ button {
   font-size: 10px;
   cursor: pointer;
   width:125px;
-  height:30px;
-
-  
+  height:30px; 
 }
-
 
 .hideit{
   display:none;
@@ -153,8 +131,6 @@ button {
   display:visible;
 }
 
-
-/* EDITED CSS */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -176,15 +152,12 @@ button {
   margin-top: 20px;
   text-align: center;
   max-width: 100%;
-  /* margin-left: 15%;
-  margin-right: 10%;  */
 }
 
 .imgContainer{
   position: relative;
   text-align: center;
   display: inline-block;
-  /* float: left; */
 }
 
 
