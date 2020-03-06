@@ -57,6 +57,7 @@ $(function() {
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
+  
 
 
     // validate form fields
@@ -77,7 +78,7 @@ $(function() {
 
 
     var newEmail = {
-      fname: $("#fn").val().trim(),
+      fname: $("#fn").val().trim(), 
       lname: $("#ln").val().trim(),
       email: $("#em").val().trim(),
     };
@@ -98,6 +99,28 @@ $(function() {
 
   });
 
+
+// API
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true",
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "numbersapi.p.rapidapi.com",
+      "x-rapidapi-key": "001df8cadcmsha73da3732d7cba9p10579bjsn40db637f4980"
+    }
+  }
+  
+  $.ajax(settings).done(function (response) {
+    console.log("resp",response);
+
+    var newRow = $(`<h5>${response.text} (${response.year})</h5>`);
+    $("#bottom").append(newRow);  
+
+  });
+
+ 
 
 });
 

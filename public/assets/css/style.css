@@ -181,6 +181,24 @@ button {
   margin-left: 175px;
 }
 
+#bottom-stuff {
+  padding: 0px 30px 30px 30px;
+  margin-left:150px;
+  position: relative;
+  border:1px solid black;
+  text-align: center;
+}
+#bottom{
+  position: absolute; bottom: 0px; 
+}
+  
+   
+   
+  margin-top: 15px;
+  margin-right: 175px;
+}
+
+
  label {
   font-weight: bold;
   font-size: 22px;
@@ -215,7 +233,7 @@ input[type=text] {
 .newstext {
   font-size: 24px;
   font-weight: bold;
-  color: rgb(93, 41, 50);n
+  color: rgb(93, 41, 50);
 }
 
 .extra-margin{
