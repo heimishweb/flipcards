@@ -74,18 +74,38 @@ router.get("/mysql", function(req, res) {
     });
 });
 
-// NOT TOUCHING THIS YET
-router.post("/api/flipcards", function(req, res) {
-  flipcard.insertOne(["flipcard_name", "devoured"], [req.body.flipcard, req.body.devoured], function(result) {
+// Newsletter signup
+router.post("/api/newslettersignup", function(req, res) {
+  flipcard.insertOne([
+    "fname", "lname", "email"
+  ], [
+    req.body.fname, req.body.lname, req.body.email
+  ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
+
+
+
 // Route to get to Home Page
 router.get("/starterPage", function(req, res) {
   res.render("starterPage");
 });
+
+
+// Route to get to Home Page
+router.get("/newsletter", function(req, res) {
+  res.render("newsletter");
+});
+
+
+// Route to get to newsletter thankyou page
+router.get("/newsletterthanks", function(req, res) {
+  res.render("newsletterthanks");
+});
+
 
 // Export routes for server.js to use.
 module.exports = router;

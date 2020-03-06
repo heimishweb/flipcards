@@ -19,7 +19,7 @@ var flipcard = {
   },
   // The variables cols and vals are arrays.
   insertOne: function(cols, vals, cb) {
-    orm.insertOne("flipcard", cols, vals, function(res) {
+    orm.insertOne("newsletter", cols, vals, function(res) {
       cb(res);
     });
   },
@@ -29,6 +29,10 @@ var flipcard = {
     });
   }
 };
+
+
+
+
 
 // Export the database functions for the controller (flipcards_controller.js).
 module.exports = flipcard;

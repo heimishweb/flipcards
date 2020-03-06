@@ -168,8 +168,56 @@ button {
   transform: translate(-50%, -50%) !important;
 }
 
+/***  extra css for buttons and newsletter  ***/
 #starterPage{
   position: fixed;
   margin-top: 15px;
   margin-left: 25px;
 }
+
+#newsletter {
+  position: fixed;
+  margin-top: 15px;
+  margin-left: 175px;
+}
+
+ label {
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(93, 41, 50);
+}
+
+.create-form {
+  padding: 5px;
+  margin: 5px;
+}
+
+.news-main {
+  text-align: center;
+  width: 100%;
+  /* border: 1px solid black; */
+  margin-top: 25px;
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type=text] {
+  width: 300px;
+  padding: 3px 3px;
+  margin: 10px 5px;
+  box-sizing: border-box;  
+  font-size: 16px;
+}
+
+.newstext {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(93, 41, 50);n
+}
+
+.extra-margin{
+  margin-top: 150px;
+} 
