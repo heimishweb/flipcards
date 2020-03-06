@@ -57,10 +57,10 @@ var req = http.request(options, function (res) {
     var trivia = JSON.parse(body);
 
     console.log(" ");
-    console.log("------------  Todays Trivia  -------------------------");
+    console.log("------------  Todays Trivia for the Backend!  -------------------------");
     console.log("Question",trivia.text);
     console.log("Answer",trivia.number);
-    console.log("-------------------------------------------------------");
+    console.log("-----------------------------------------------------------------------");
   });
 });
 
