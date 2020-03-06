@@ -228,6 +228,9 @@ input[type=text] {
 .extra-margin {
   margin-top: 150px;
 } 
+.extra-marginx {
+  margin-top: 250px;
+} 
 
 /* About Page */
 #about-header {
@@ -238,4 +241,16 @@ input[type=text] {
 #container {
   width: 80%;
   margin: auto;
+}
+
+
+#bottom-stuff {
+  padding: 0px 30px 30px 30px;
+  margin-left:150px;
+  position: relative;
+}
+
+#funfact{
+
+  position: absolute; bottom: 0px; 
 }
