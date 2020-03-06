@@ -1,46 +1,49 @@
-<a href="/starterPage">  
-  <button id="starterPage">HOME PAGE</button>     
+<a href="/starterPage">
+  <button id="starterPage">HOME PAGE</button>
 </a>
 
-<a href="/newsletter">  
-  <button id="newsletter">NEWSLETTER</button>     
+<a href="/newsletter">
+  <button id="newsletter">NEWSLETTER</button>
+</a>
+<a href="/crowdsourced">
+  <button id="crowdsourced">CROWDSOURCED</button>
 </a>
 
- <h1>Flip Cards</h1>
- <!--<h3>Hover over the image below:</h3>-->
-        
-        
+<h1>Flip Cards</h1>
+<!--<h3>Hover over the image below:</h3>-->
+
+
 {{#each flipcards}}
 <div id="rw{{@index}}" class="hideit">
 
-<div class="bg">  
+  <div class="bg">
 
-<div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front" style="background-image: url('/assets/img/cardFlipTexture.png');" id='over'>
-        <h1>{{question}}</h1>
-        {{!-- <h1>Front</h1> --}}
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front" style="background-image: url('/assets/img/cardFlipTexture.png');" id='over'>
+          <h1>{{question}}</h1>
+          {{!-- <h1>Front</h1> --}}
+        </div>
+
+        <div class="flip-card-back" style="background-image: url('/assets/img/cardFlipTexture.png');">
+
+          <h1>{{answer}}</h1>
+          {{!-- <h1>Back</h1> --}}
+        </div>
+
       </div>
-
-       <div class="flip-card-back" style="background-image: url('/assets/img/cardFlipTexture.png');">
-    
-        <h1>{{answer}}</h1>
-         {{!-- <h1>Back</h1> --}}
-      </div>
-
     </div>
-   </div>
-</div>
-  
-
-
-  <div style=" text-align:center; margin-top:25px">     
-  <button class="show-next" data-id="{{@index}}" id="{{@index}}">NEXT</button></li>      
   </div>
 
 
 
-</div>  
+  <div style=" text-align:center; margin-top:25px">
+    <button class="show-next" data-id="{{@index}}" id="{{@index}}">NEXT</button></li>
+  </div>
+
+
+
+</div>
 
 
 </div>
@@ -49,34 +52,35 @@
 
 <div id="rw7" class="hideit">
 
-<div class="bg">  
+  <div class="bg">
 
-<div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front" style="background-image: url('/assets/img/cardFlipTexture.png');" id='over'>
-        <h1>COMPLETED!</h1>
-        {{!-- <h1>Front</h1> --}}
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front" style="background-image: url('/assets/img/cardFlipTexture.png');" id='over'>
+          <h1>COMPLETED!</h1>
+          {{!-- <h1>Front</h1> --}}
+        </div>
+
+        <div class="flip-card-back" style="background-image: url('/assets/img/cardFlipTexture.png');">
+
+          <h1>CONGRATS!</h1>
+          {{!-- <h1>Back</h1> --}}
+        </div>
+
       </div>
-
-       <div class="flip-card-back" style="background-image: url('/assets/img/cardFlipTexture.png');">
-    
-        <h1>CONGRATS!</h1>
-         {{!-- <h1>Back</h1> --}}
-      </div>
-
     </div>
-   </div>
-</div>
-  
-
-
-  <div style=" text-align:center; margin-top:25px">     
-  <button class="show-again" >Try Again</button></li> &nbsp;  &nbsp; <button class="show-new" >Select New Language</button></li>     
   </div>
 
 
 
-</div>  
+  <div style=" text-align:center; margin-top:25px">
+    <button class="show-again">Try Again</button></li> &nbsp; &nbsp; <button class="show-new">Select New
+      Language</button></li>
+  </div>
+
+
+
+</div>
 
 
 </div>
@@ -85,10 +89,7 @@
 
 
 <script>
-$(document).ready(function () {
-  $("#rw0").show();
-});
- </script>   
-
-
- <div id="funfacts"></div>    
+  $(document).ready(function () {
+    $("#rw0").show();
+  });
+</script>

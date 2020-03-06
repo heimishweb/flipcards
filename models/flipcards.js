@@ -2,29 +2,34 @@
 var orm = require("../config/orm.js");
 
 var flipcard = {
-  selectNext: function(vals, cb) {
-    orm.selectNext("flipcard", vals, function(res) {
+  selectNext: function (vals, cb) {
+    orm.selectNext("flipcard", vals, function (res) {
       cb(res);
     });
   },
-  selectOne: function(vals, cb) {
-    orm.selectOne("flipcard", vals, function(res) {
+  selectOne: function (vals, cb) {
+    orm.selectOne("flipcard", vals, function (res) {
       cb(res);
     });
   },
-  selectAll: function(cb) {
-    orm.selectAll("flipcard", function(res) {
+  selectAll: function (cb) {
+    orm.selectAll("flipcard", function (res) {
       cb(res);
     });
   },
   // The variables cols and vals are arrays.
-  insertOne: function(cols, vals, cb) {
-    orm.insertOne("newsletter", cols, vals, function(res) {
+  insertOne: function (cols, vals, cb) {
+    orm.insertOne("newsletter", cols, vals, function (res) {
       cb(res);
     });
   },
-  updateOne: function(objColVals, condition, cb) {
-    orm.updateOne("flipcard", objColVals, condition, function(res) {
+  updateOne: function (objColVals, condition, cb) {
+    orm.updateOne("flipcard", objColVals, condition, function (res) {
+      cb(res);
+    });
+  },
+  insertOne: function (cols, vals, cb) {
+    orm.insertOne("flipcard", cols, vals, function (res) {
       cb(res);
     });
   }

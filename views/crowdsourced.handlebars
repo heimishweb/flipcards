@@ -1,0 +1,49 @@
+<div id="crowdHeader">
+    <h1> You too can contribute to the web development knowledgebase!</h1>
+    <h2> Submit your technical interview question:</h2>
+</div>
+<div id="crowdDiv">
+    <form class="questionSubmit" name="crowdsourcedSubmit">
+        <input id="questionIn" placeholder="question"> <br>
+        <input id="answerIn" placeholder="answer"> <br>
+        <button type="submit" id="submit">Submit</button>
+
+    </form>
+    <a href="/user">
+        <button id="viewQ">View Community Questions</button>
+    </a>
+</div>
+
+<script>
+
+    //crowdsourced
+    $(".questionSubmit").on("submit", function () {
+        var fn = $("#questionIn").val().trim();
+        var ln = $("#answerIn").val().trim();
+        if (fn === "" || ln === "") {
+            alert("All Fields are Required");
+            return;
+        }
+        var newQuestion = {
+            category: "user",
+            question: $("#questionIn").val().trim(),
+            answer: $("#answerIn").val().trim()
+        }
+        // Make sure to preventDefault on a submit event.
+        console.log("this is newQuestion: " + newQuestion);
+
+        // Send the POST request.
+        $.ajax("/api/submit", {
+            type: "POST",
+            data: newQuestion
+        }).then(
+            function () {
+                console.log("created new question");
+                // Reload the page to get the updated list
+                location.href = "/user";
+            }
+        );
+    });
+
+
+</script>

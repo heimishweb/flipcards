@@ -74,6 +74,34 @@ router.get("/mysql", function(req, res) {
     });
 });
 
+//crowdsourced - /user
+router.get("/user", function(req, res) {
+  var cat = "user";
+  var condition = " category = '" + cat + "'" ;
+  //  console.log("conditionI: ",condition);
+  flipcard.selectOne(
+    condition,
+    function(data) {
+      var hbsObject = {
+        flipcards: data,
+      };
+      //  console.log("results: ",hbsObject);
+      res.render("index", hbsObject);
+    });
+});
+
+//crowdsourced 
+router.post("/api/submit", function (req, res) {
+  flipcard.insertOne(["category","question", "answer"
+  ], [
+     req.body.category, req.body.question, req.body.answer
+  ], function (result) {
+    // Send back the ID of the new quote
+
+    res.json({ result });
+  });
+});
+
 // Newsletter signup
 router.post("/api/newslettersignup", function(req, res) {
   flipcard.insertOne([
@@ -110,6 +138,11 @@ router.get("/newsletterthanks", function(req, res) {
 router.get("/aboutPage", function(req, res) {
   res.render("aboutPage");
 });
+
+//route to crowdsource page
+router.get("/crowdsourced", function (req, res){
+  res.render("crowdsourced");
+})
 
 // Export routes for server.js to use.
 module.exports = router;
