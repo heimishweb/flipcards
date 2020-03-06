@@ -106,6 +106,10 @@ router.get("/newsletterthanks", function(req, res) {
   res.render("newsletterthanks");
 });
 
+// Route to get to about page
+router.get("/aboutPage", function(req, res) {
+  res.render("aboutPage");
+});
 
 // Export routes for server.js to use.
 module.exports = router;
