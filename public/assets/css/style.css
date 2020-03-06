@@ -254,3 +254,35 @@ input[type=text] {
 
   position: absolute; bottom: 0px; 
 }
+
+#crowdDiv {
+  position: relative;
+  top: 200px;
+  left: 500px;
+}
+
+#questionIn {
+  width: 400px;
+  height:30px;
+}
+
+#answerIn {
+  width: 400px;
+  height:100px;
+}
+
+#crowdHeader {
+  text-align:center;
+}
+
+#viewQ {
+  position:relative;
+  top:-32px;
+  right:-130px;
+}
+
+#crowdsourced {
+  position: fixed;
+  margin-top: 15px;
+  margin-left: 325px;
+}
