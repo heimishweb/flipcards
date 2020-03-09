@@ -290,6 +290,11 @@ font-family: 'Itim', cursive;
 .show-new {
   margin-left: -50px;
 }
+.show-new2 {
+  margin-left: -50px;
+  margin-top: 50px;
+  width: 250px;
+}
 .show-next {
   margin-left:-50px;
 }

@@ -86,7 +86,7 @@ router.get("/user", function(req, res) {
         flipcards: data,
       };
       //  console.log("results: ",hbsObject);
-      res.render("index", hbsObject);
+      res.render("indexcrowd", hbsObject);
     });
 });
 
