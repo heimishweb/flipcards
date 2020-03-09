@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  background-image: url("/assets/img/cork-boardResize.jpg");
+  background-image: url("assets/img/cork-boardResize.jpg");
   /* Full height */
   height: 100%; 
   /* Center and scale the image nicely */
