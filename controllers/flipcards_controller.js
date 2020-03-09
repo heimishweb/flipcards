@@ -104,7 +104,7 @@ router.post("/api/submit", function (req, res) {
 
 // Newsletter signup
 router.post("/api/newslettersignup", function(req, res) {
-  flipcard.insertOne([
+  flipcard.insertOneN ([
     "fname", "lname", "email"
   ], [
     req.body.fname, req.body.lname, req.body.email

@@ -2,16 +2,32 @@ body, html {
   height: 100%;
   margin: 0;
   background-image: url("/assets/img/cork-boardResize.jpg");
-
   /* Full height */
   height: 100%; 
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
- 
+ .introText {
+   margin: auto 25% auto 25% ;
+   background-color: rgb(238, 227, 227, 0.1);
+   font-family: 'Patua One', cursive;
+   font-weight: bold; 
+ }
+ #Stated {
+  font-family: 'Itim', cursive;
+ }
+.front {
+  width: 600px;
+  height: 400px;
+  background-color:whitesmoke; 
+}
+.back {
+  width: 600px;
+  height: 400px;
+  background-color:whitesmoke; 
+}
 .flip-card  {
   margin: 5% auto 0 auto;
   width: 50%;
@@ -19,7 +35,6 @@ body, html {
   height: 400px;
   perspective: 1000px;
 }
-
 .flip-card-inner {
   position: absolute;
   width: 100%;
@@ -29,260 +44,253 @@ body, html {
   transform-style: preserve-3d;
   box-shadow: 0 20px 20px 0 rgb(105, 3, 3);
 }
-
 .flip-card:hover .flip-card-inner {
   /* transform: rotateY(180deg); */
     -ms-transform: rotateY(-180deg); /* IE 9 */
     -webkit-transform: rotateY(-180deg); /* Safari Chrome */
     transform: rotateY(-180deg);
 }
-
 .flip-card-front, .flip-card-back {
   position: absolute;
+  
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
-  backface-visibility:visible; 
+  backface-visibility:hidden; 
 }
-
 .flip-card-front {
-  color: black;
   font-weight: bold;
 }
-
 .flip-card-back {
   position: absolute;
-  color:black;
   font-weight: bold;
   transform: rotateY(180deg); 
+  font-size: 90%;
+  font-style: italic;
+  font-family: 'Itim', cursive;
 }
-
-.flip-box {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-}
-
-.flip-box-inner { 
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-box-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateX(180deg);
-}
-
 h1 {
     text-align: center;
-    color: rgb(93, 41, 50);
+    color: rgb(63, 52, 52);
+    font-family: 'Itim', cursive;
+    margin-left: 40px;
+    margin-right: 20px;
 }
-
+h2 {
+ font-family: 'Itim', cursive;
+}
 img {
   display: block;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto; 
 }
-
+.buttonOn {
+  background-color: rgba(240, 20, 20, 0.7);
+}
 button {
-  background-color: brown;
+  background-color: hsl(0, 59%, 41%, 0.5);
+  font-family: 'Patua One', cursive;
   border-radius: 5px;
   border: lightgray solid 1px;
   color: white;
   padding: 2px 5px 2px 5px;
+  box-shadow: 0 20px 20px 0 rgb(105, 3, 3);
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 10px;
+  font-size: 16px;
   cursor: pointer;
   width:125px;
   height:30px; 
+  letter-spacing: 1px;
+  position: absolute;
 }
-
+.show-new {
+  width: 200px;
+}
 .hideit{
   display:none;
 }
 .showit{
   display:visible;
 }
-
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
-
 /* Create two equal columns that sits next to each other */
 .column {
   flex: 50%;
   padding: 0 4px;
 }
-
 .column img {
   margin-top: 8px;
   vertical-align: middle;
 }
-
 #container{
   margin-top: 20px;
   text-align: center;
   max-width: 100%;
 }
-
 .imgContainer{
   position: relative;
   text-align: center;
   display: inline-block;
 }
-
-
 #javascript, #css, #hypertext, #mysql {
   position: absolute;
   top: 45% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
 }
-
 /***  extra css for buttons and newsletter  ***/
 #starterPage{
-  position: fixed;
+  position: absolute;
   margin-top: 15px;
-  margin-left: 25px;
+  margin-left: 200px;
+  margin-right: 15px;
+ 
 }
-
 #newsletter {
-  position: fixed;
+  position: absolute;
   margin-top: 15px;
-  margin-left: 175px;
+  margin-left: 325px;
 }
-
 #about-button {
-  position: fixed;
+  position: absolute;
   margin-top: 15px;
-  margin-left: 25px;
+  margin-left: 125px;
   z-index: 1;
 }
-
+#crowdsourced {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 450px;
+}
  label {
   font-weight: bold;
   font-size: 22px;
   color: rgb(93, 41, 50);
 }
-
 .create-form {
   padding: 5px;
   margin: 5px;
 }
-
 .news-main {
   text-align: center;
   width: 100%;
   /* border: 1px solid black; */
   margin-top: 25px;
-
 }
-
 .form-group {
   margin-bottom: 15px;
+  font-family: 'Patua One', cursive;
 }
-
 input[type=text] {
-  width: 300px;
+  width: 600px;
   padding: 3px 3px;
   margin: 10px 5px;
   box-sizing: border-box;  
   font-size: 16px;
 }
-
 .newstext {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
-  color: rgb(93, 41, 50);
+  /*color: whitesmoke;*/
+  background-color:white(0, 59%, 41%, 0.5);
+  height: 400px;
+  font-family: 'Itim', cursive;
+  letter-spacing: 1px;
+  padding: 0px 10px -10px 10px;
 }
-
 .extra-margin {
   margin-top: 150px;
 } 
 .extra-marginx {
-  margin-top: 250px;
-} 
-
+  margin-top: 200px;
+}
+#funfacts {
+  
+  margin: auto 25% auto 25%;
+}
 /* About Page */
 #about-header {
-  padding-top: 70px;
+  margin-top: 30px;
   font-size: 55px;
+  text-align: center;
+  font-weight: normal;
+  font-style: italic; 
+  background-image: url("/assets/img/FlipcardDistortsmll.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top; 
 }
-
 #container {
   width: 80%;
   margin: auto;
 }
-
-
 #bottom-stuff {
-  padding: 0px 30px 30px 30px;
+  padding: 0px 30px 30px 10px;
   margin-left:150px;
   position: relative;
+  
 }
-
 #funfact{
-
-  position: absolute; bottom: 0px; 
+  position: absolute; 
+  bottom: 0px;
 }
-
+h4 {
+font-family: 'Itim', cursive;
+  letter-spacing: 1px;
+  font-style: italic;
+  background-color: rgb(253, 250, 250, 0.5);
+  margin-top: -15px;
+}
 #crowdDiv {
   position: relative;
   top: 200px;
   left: 500px;
 }
-
 #questionIn {
-  width: 400px;
+  width: 800px;
   height:30px;
 }
-
 #answerIn {
-  width: 400px;
+  width: 800px;
   height:100px;
 }
-
 #crowdHeader {
   text-align:center;
 }
-
 #viewQ {
-  position:relative;
-  top:-32px;
-  right:-130px;
+  position:absolute;
+  width: 250px;
+ margin: 0% 25% auto 25%;
 }
-
-#crowdsourced {
-  position: fixed;
-  margin-top: 15px;
-  margin-left: 325px;
+.over {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 40px;
+  color:  rgba(240, 20, 20, 0.7);
+  font-family: 'Faster One', cursive;
+  /*font-family: 'Luckiest Guy', cursive;*/
+  letter-spacing: 1px;
+  font-size: 55px;
 }
+#btnContainer {
+  padding-bottom: 25px;
+  
+}
+.show-again {
+  margin-left: 180px;
+}
+.show-new {
+  margin-left: -50px;
+}
+.show-next {
+  margin-left:-50px;
+}
+  
+  /*"show-new" >Select New Language</button>  */
