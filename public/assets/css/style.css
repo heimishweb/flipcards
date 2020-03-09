@@ -226,6 +226,7 @@ input[type=text] {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top; 
+  font-family: 'Faster One', cursive;
 }
 #container {
   width: 80%;
