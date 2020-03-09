@@ -18,8 +18,8 @@ var flipcard = {
     });
   },
   // The variables cols and vals are arrays.
-  insertOne: function (cols, vals, cb) {
-    orm.insertOne("newsletter", cols, vals, function (res) {
+  insertOneN: function (cols, vals, cb) {
+    orm.insertOneN("newsletter", cols, vals, function (res) {
       cb(res);
     });
   },
